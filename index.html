@@ -3,11 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Choose Your Axe</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,600" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32x32.png">
 </head>
 <body>
+    <div class="container">
+        <header id="home">
+            <nav class="navbar">
+                <div class="row">
+                    <img class="logo" src="img/cya_logo2.png" alt="Choose Your Axe Logo">
+                    <ul class="main-nav" id="navigation">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#howto">How To</a></li>
+                        <li><a href="#tribute">Tribute</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <a class="mobile-nav-icon"><i class="icon ion-md-menu" ></i></a>
+                </div>
+            </nav>
+        </header>
+
+        <section>
+            <div class="row choices">
+                <h1 class="select">Select the Style of Axe<br/> and the Brand You Prefer</h1>
+
+                <div class="guitar-selection">
+                    <div class="select-style">
+                        <h3>STYLE</h3>
+                        <select class="sel-box" id="type" onchange="guitarSelection()">
+                            <option selected>Electric</option>
+                            <option>Bass</option>
+                            <option>Acoustic</option>
+                        </select>
+                    </div>
+                    <div id="brand">
+                        <div class="brand-selection">
+                            <h3>BRAND</h3>
+                            <select class="sel-box" id="electric" onchange="guitarSelection()">
+                                <option selected><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Fender+electric+guitars" target="_blank">Fender</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Gibson+electric+guitars" target="_blank">Gibson</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Ibanez+electric+guitars" target="_blank">Ibanez</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Jackson+electric+guitars" target="_blank">Jackson</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Charvel+electric+guitars" target="_blank">Charvel</a></option>
+                                <option><a href="https://www.musiciansfriend.com/electric-guitars/dean?typeAheadRedirect=true" target="_blank">Dean</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Epiphone+electric+guitars" target="_blank">Epiphone</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=ESP+electric+guitars" target="_blank">ESP</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Schecter+electric+guitars" target="_blank">Schecter</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Washburn+electric+guitars" target="_blank">Washburn</a></option>
+                            </select>
+                        </div>
+
+                        <!--<div class="col-1-of-2">
+                            <select class="guitar-brand sel-box" id="bass" onchange="guitarSelection()">
+                                <option selected><a href="https://www.musiciansfriend.com/bass/fender?typeAheadRedirect=true" target="_blank">Fender</a></option>
+                                <option><a href="https://www.musiciansfriend.com/bass/gibson?typeAheadRedirect=true" target="_blank">Gibson</a></option>
+                                <option><a href="https://www.musiciansfriend.com/bass/ibanez?typeAheadRedirect=true" target="_blank">Ibanez</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Jackson+bass+guitars" target="_blank">Jackson</a></option>
+                                <option><a href="https://www.musiciansfriend.com/bass/epiphone?typeAheadRedirect=true" target="_blank">Epiphone</a></option>
+                                <option><a href="https://www.musiciansfriend.com/bass/squier?typeAheadRedirect=true" target="_blank">Squier</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Rickenbacker+bass+guitars" target="_blank">Rickenbacker</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Schecter+bass+guitars" target="_blank">Schecter</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Yamaha+bass+guitars" target="_blank">Yamaha</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Spector+bass+guitars" target="_blank">Spector</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Lakland+bass+guitars" target="_blank">Schecter</a></option>
+                            </select>
+                        </div>
+
+                        <div class="col-1-of-2">
+                            <select class="guitar-brand sel-box" id="acoustic" onchange="guitarSelection()">
+                                <option selected><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Alvarez+Acoustic+guitars" target="_blank">Alvarez</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Gibson+Acoustic+guitars" target="_blank">Gibson</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Ibanez+Acoustic+guitars" target="_blank">Ibanez</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=yamaha+Acoustic+guitars" target="_blank">Yamaha</a></option>
+                                <option><a href="https://www.musiciansfriend.com/acoustic-guitars/martin?typeAheadRedirect=true" target="_blank">Martin</a></option>
+                                <option><a href="https://www.musiciansfriend.com/search?typeAheadSuggestion=true&typeAheadRedirect=true&sB=r&Ntt=Ovation+Acoustic+guitars" target="_blank">Ovation</a></option>
+                                <option><a href="https://www.musiciansfriend.com/taylor?typeAheadRedirect=true" target="_blank">Taylor</a></option>
+                                <option><a href="https://www.musiciansfriend.com/acoustic-guitars/fender?typeAheadRedirect=true" target="_blank">Fender</a></option>
+                            </select>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="row go-btn">
+                    <a class="btn" href="#">GETCHA PULL</a>
+                </div>
+
+                <div class="row">
+                    <div class="col span-2-of-2">
+                        <p class="your-choice">All links go to Musicians Friend website.<br/> But feel free to use whoever you choose to buy your gear from.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
     
     <script src="script.js"></script>
 </body>

@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Crimson Text', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    color: #fff;
+}
+.container {
+    width:1400px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+}
+
+header {
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.logo {
+    height: 110px;
+    width: auto;
+    float: left;
+    margin-left: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+/* ========================================== */
+/* MAIN NAV */
+/* ========================================== */
+
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    z-index: 9999;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 4%;
+    margin-right: 40px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    text-decoration: none;
+    font-size: 125%;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.5s;
+    -o-transition: border-bottom 0.5s;
+    transition: border-bottom 0.5s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #ff0000;
+}
+
+.mobile-nav-icon {
+    float: right;
+    margin-top: 4%;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+/* ========================================== */
+/* SELECTION */
+/* ========================================== */
+
+.choices {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    height: 600px;
+}
+
+.guitar-selection {
+    display: flex;
+    justify-content: space-around;
+}
+
+.select {
+    margin-bottom: 40px;
+}
+
+*:focus { outline: none; }
+
+.lbl-1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.lbl-2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sel-box {
+    text-transform: uppercase;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 100%;
+    font-family: 'Crimson Text', sans-serif;
+    text-align-last: center;
+    margin: 40px 0;
+}
+
+.sel-box option {
+    text-align: center;
+}
+
+/* ========================================== */
+/* BUTTON */
+/* ========================================== */
+
+.go-btn {
+    margin-top: 60px;
+    padding-top: 3px;
+    font-size: 120%;
+    width: 200px;
+    height: 40px;
+    background-color: rgba(0, 185, 0, 0.7);
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s ;
+    transition: background-color 0.5s ;
+}
+
+.go-btn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.go-btn:hover {
+    background-color: #00d000;
+}
+.go-btn:active {
+    transform:scale(0.9);
+}
+
+.your-choice {
+    margin-top: 60px;
+    line-height: 140%;
+    font-size: 120%
+}
